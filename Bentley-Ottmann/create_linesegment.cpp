@@ -25,14 +25,13 @@ cv::Point2i Line_Segment::get_end_point(){
 
 std::vector<Line_Segment> cleate_line(){
     std::vector<Line_Segment> line;
-    line.push_back(Line_Segment(500, 220, 500, 600));   // A
-    line.push_back(Line_Segment(250, 500, 600, 500));   // B
-    line.push_back(Line_Segment(630, 120, 630, 450));   // C
-    line.push_back(Line_Segment(300, 220, 300, 400));   // D
-    line.push_back(Line_Segment(150,  50, 150, 370));   // E
-    line.push_back(Line_Segment(250, 270, 600, 270));   // F
-    line.push_back(Line_Segment( 50, 150, 500, 150));   // G
-    line.push_back(Line_Segment(320,  50, 660,  50));   // H
+    line.push_back(Line_Segment(100, 400, 300, 150));   // A
+    line.push_back(Line_Segment(250, 450, 130, 100));   // B
+    line.push_back(Line_Segment(200, 650, 400, 350));   // C
+    line.push_back(Line_Segment(350, 330, 630, 220));   // D 1->350
+    line.push_back(Line_Segment(410, 250, 500, 370));   // E
+    line.push_back(Line_Segment(380, 120, 600, 150));   // F
+    line.push_back(Line_Segment(430, 600, 650, 330));   // G
     
     return line;
 }

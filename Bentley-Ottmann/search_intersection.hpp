@@ -14,29 +14,22 @@
 
 typedef cv::Point2i datatype;
 
-typedef struct element{
-    cv::Point2i p1, p2;
-    element *next;
-} *elementptr;
-
 typedef struct node{
-    cv::Point v;
-    struct node *lson, *rson;
+    cv::Point2i fp, ep;
+    struct node *lson, *rson, *parent;
 } *nodeptr;
 
-struct BothPoint{
-    cv::Point2i first_point;
-    cv::Point2i end_point;
+struct element{
+    cv::Point2i lf, le;
+    struct node *IA, *IB;
 };
 
-int node_init();
-int insert_point(datatype data);
-int delete_point(datatype data);
-int insert_element(datatype first, datatype end);
+int area(cv::Point2i q1, cv::Point2i q2, cv::Point2i q3);
+int between(cv::Point2i p1, cv::Point2i p2, cv::Point2i p3);
+int intersect(cv::Point2i a, cv::Point2i b, cv::Point2i c, cv::Point2i d);
 
-void treeInterval(nodeptr p, int x1, int x2, int y);
-void sweep(elementptr head, nodeptr root);
-void QuickSort(std::vector<BothPoint> &array, int begin, int end);
-void sort_y(std::vector<Line_Segment> line);
+int node_init();
+nodeptr insert_point(element data);
+nodeptr delete_point(element data);
 
 #endif /* search_intersection_hpp */
